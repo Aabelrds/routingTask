@@ -8,92 +8,74 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router';
 import { FoodComponent } from './paises/food/food.component';
 
-
-const routes:Routes = [
+const routes: Routes = [
   {
-    path:'',
-    component:CountriesComponent,
-    pathMatch:'full'
+    path: '',
+    component: CountriesComponent,
+    pathMatch: 'full',
   },
   {
-    path:'australia',
-    component:AustraliaComponent,
-    // hijo de la ruta primera, que hace concatener localhosts/austrlia/food
-    //le pasamos el que queremos que renderice cuando llgue a esa ruta component:foo
-    children:[
+    path: 'australia',
+    component: AustraliaComponent,
+
+    children: [
       {
-        path:'food',
-        component:FoodComponent
-
-      }
-    ]
+        path: 'food',
+        component: FoodComponent,
+      },
+    ],
   },
   {
-    path:'egipto',
-    component:EgiptoComponent,
+    path: 'egipto',
+    component: EgiptoComponent,
 
-    children:[
+    children: [
       {
-        path:'food',
-        component:FoodComponent
-
-      }
-    ]
+        path: 'food',
+        component: FoodComponent,
+      },
+    ],
   },
   {
-    path:'italia',
-    component:ItaliaComponent,
-    children:[
+    path: 'italia',
+    component: ItaliaComponent,
+    children: [
       {
-        path:'food',
-        component:FoodComponent
-
-      }
-    ]
+        path: 'food',
+        component: FoodComponent,
+      },
+    ],
   },
   {
-    path:'japon',
-    component:JaponComponent,
-    children:[
+    path: 'japon',
+    component: JaponComponent,
+    children: [
       {
-        path:'food',
-        component:FoodComponent
-
-      }
-    ]
+        path: 'food',
+        component: FoodComponent,
+      },
+    ],
   },
 
   {
-    path:'venezuela',
-    component:VenezuelaComponent,
-    children:[
+    path: 'venezuela',
+    component: VenezuelaComponent,
+    children: [
       {
-        path:'food',
-        component:FoodComponent
-
-      }
-    ]
+        path: 'food',
+        component: FoodComponent,
+      },
+    ],
   },
   {
-    path:'**',
-    redirectTo:'',
+    path: '**',
+    redirectTo: '',
   },
-
-]
-
-
-
-
-
-
+];
 
 @NgModule({
   declarations: [],
-  imports: [
-    RouterModule.forRoot(routes)
-  ],
-  exports:[
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
