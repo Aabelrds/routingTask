@@ -7,7 +7,7 @@ import { VenezuelaComponent } from './paises/venezuela/venezuela.component';
 import { EgiptoComponent } from './paises/egipto/egipto.component';
 import { JaponComponent } from './paises/japon/japon.component';
 import { AustraliaComponent } from './paises/australia/australia.component';
-import { FoodComponent } from './paises/australia/food/food.component';
+import { FoodComponent } from './paises/food/food.component';
 
 @NgModule({
   declarations: [
