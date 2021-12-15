@@ -1,3 +1,4 @@
+import { FoodService } from './services/food.service';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,10 +8,12 @@ import { VenezuelaComponent } from './paises/venezuela/venezuela.component';
 import { EgiptoComponent } from './paises/egipto/egipto.component';
 import { JaponComponent } from './paises/japon/japon.component';
 import { AustraliaComponent } from './paises/australia/australia.component';
-import { FoodComponent } from './paises/australia/food/food.component';
+import { FoodComponent } from './paises/food/food.component';
+
 
 @NgModule({
   declarations: [
+
     AppComponent,
     ItaliaComponent,
     VenezuelaComponent,
@@ -18,12 +21,15 @@ import { FoodComponent } from './paises/australia/food/food.component';
     JaponComponent,
     AustraliaComponent,
     FoodComponent
+
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule
+
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ FoodService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

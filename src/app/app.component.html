@@ -1,9 +1,13 @@
-<div class="row container mt-4">
+<div class="row container  text-center">
+  <h2>Countries Foods</h2>
   <div class="col-3">
-    <h2>Search</h2>
     <hr>
     <ul class="list-group">
-      <li routerLink="australia" routerLinkActive="active" class="list-group-item listCss">Australia</li>
+      <li routerLink="australia"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact:true}"
+      class="list-group-item listCss">
+      Australia</li>
       <li routerLink="egipto" routerLinkActive="active" class="list-group-item listCss">Egipto</li>
       <li routerLink="italia" routerLinkActive="active" class="list-group-item listCss">Italia</li>
       <li routerLink="japon" routerLinkActive="active" class="list-group-item listCss">Japon</li>
